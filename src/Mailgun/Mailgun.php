@@ -406,4 +406,12 @@ class Mailgun
     {
         return new Api\Ip($this->httpClient, $this->requestBuilder, $this->hydrator);
     }
+
+    /**
+     * @return Api\IpPool
+     */
+    public function ip_pools()
+    {
+        return new Api\IpPool($this->httpClient, $this->requestBuilder, $this->hydrator);
+    }
 }

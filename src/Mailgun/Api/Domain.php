@@ -94,9 +94,8 @@ class Domain extends HttpApi
             // TODO(sean.johnson): Extended spam filter input validation.
             Assert::stringNotEmpty($spamAction);
             Assert::boolean($wildcard);
-
             $params['smtp_password'] = $smtpPass;
-            $params['spam_action'] = $spamAction;
+            $params['spam_action']   = $spamAction;
         }
 
         $response = $this->httpPost('/v3/domains', $params);
